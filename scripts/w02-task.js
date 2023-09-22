@@ -7,7 +7,7 @@ let fullName = "Rosy Bertacchini";
 let currentYear = "";
 
 //*
-const profilePicture = "https://github.com/rosybertacchini/cse121b/images/Yo_RosyBertacchini-1.png";
+const profilePicture = "images/Yo_RosyBertacchini-1.png";
 
 
 /* Step 3 - Element Variables */
