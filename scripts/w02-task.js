@@ -30,16 +30,19 @@ imageElement.setAttribute('alt', 'Profile image of Rosy Bertacchini');
 /* Step 5 - Array */
 let favoriteFoods= ['avocado toast', 'asparagus', 'artichokes', 'marlin fish','mango'];
 
-let i = 0;
-let favoriteFood = "";
-while (i <favoriteFoods.length) {
-    favoriteFood += favoriteFoods[i]+" / ";
-    i++;
-}
+foodElemet.innerHTML = `${favoriteFoods}`;
 
-foodElemet.innerHTML = `${favoriteFood}`;
+let new_favorite = "kiwi";
+favoriteFoods.push(new_favorite);
+foodElemet.innerHTML +=   `<br>${favoriteFoods}`;
 
 
+favoriteFoods.pop();
+foodElemet.innerHTML +=   `<br>${favoriteFoods}`;
+
+
+favoriteFoods.splice(0, 1);
+foodElemet.innerHTML +=   `<br>${favoriteFoods}`;
 
 
 
