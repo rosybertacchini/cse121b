@@ -22,7 +22,7 @@ yearElement.textContent = "2023";
 
 //*
 const imageElement = document.querySelector("img");
-imageElement.setAttribute('scr', profilePicture); 
+imageElement.setAttribute('scr',  "https://rosybertacchini.github.io/cse121b/images/Yo_RosyBertacchini-1.png"); 
 imageElement.setAttribute('alt', `Profile of ${fullName} `); 
 
 
