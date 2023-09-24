@@ -7,7 +7,7 @@ let fullName = "Rosy Bertacchini";
 let currentYear = "";
 
 //*
-const profilePicture = "https://rosybertacchini.github.io/cse121b/images/Yo_RosyBertacchini-1.png";
+const profilePicture = "images/placeholder.png";
 
 
 /* Step 3 - Element Variables */
@@ -22,7 +22,7 @@ yearElement.textContent = "2023";
 
 //*
 const imageElement = document.querySelector("img");
-imageElement.setAttribute('scr',  "https://rosybertacchini.github.io/cse121b/images/Yo_RosyBertacchini-1.png"); 
+imageElement.setAttribute('scr',  profilePicture); 
 imageElement.setAttribute('alt', `Profile of ${fullName} `); 
 
 
