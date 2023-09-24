@@ -7,7 +7,7 @@ let fullName = "Rosy Bertacchini";
 let currentYear = "";
 
 //*
-const profilePicture = "images/Yo_RosyBertacchini-1.png";
+const profilePicture = "/images/Yo_RosyBertacchini-1.png";
 
 
 /* Step 3 - Element Variables */
@@ -23,7 +23,7 @@ yearElement.textContent = "2023";
 //*
 const imageElement = document.querySelector("img");
 imageElement.setAttribute('scr', profilePicture); 
-imageElement.setAttribute('alt', 'Profile image of Rosy Bertacchini'); 
+imageElement.setAttribute('alt', `Profile of ${fullName} `); 
 
 
 
@@ -43,7 +43,3 @@ foodElemet.innerHTML +=   `<br>${favoriteFoods}`;
 
 favoriteFoods.splice(0, 1);
 foodElemet.innerHTML +=   `<br>${favoriteFoods}`;
-
-
-
-
