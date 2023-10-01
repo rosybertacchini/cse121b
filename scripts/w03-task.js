@@ -49,7 +49,8 @@ let devide = (number1,number2) => number1 / number2;
 let devideNumbers = ()  =>   {
     let devidend1 = Number(document.querySelector('#dividend').value);
     let divisor2 = Number(document.querySelector('#divisor').value);
-    return document.querySelector('#quotient').value = devide(devidend1,divisor2);
+    return document.querySelector('#quotient').value = devide(devidend1,divisor2);git status
+    
    
 }
 
