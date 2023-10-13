@@ -30,7 +30,7 @@ const displayTemples = (temples) => {
       
       // imageElement.setAttribute("scr", `${temple.imageUrl}`);  // did not work like this
       imageElement.alt = `${temple.location}`;
-      imageElement.width = "200";
+      imageElement.width = "250";
       imageElement.height = "200";
       imageElement.style.boxShadow = "0px 0px 10px 10px";
 
