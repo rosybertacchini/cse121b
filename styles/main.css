@@ -107,6 +107,7 @@ label {
     margin: 15px 0;
 }
 
+
 footer {
     background-color: gray;
     color: white;
@@ -117,7 +118,24 @@ footer {
     bottom: 0;
 }
 
+/***********************************************************************
+/* added  W05 */
+
+
+#sortBy {
+    margin-top: 10px; 
+}
+
+#temples {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    margin: 20 auto;
+}
+/***********************************************************************/
+
 /* Class Selectors */
+
 .active {
     border-bottom: 1px solid yellow;
 }
