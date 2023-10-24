@@ -61,7 +61,7 @@ let toggleInfo = () => {
   }
 };
 
-/* ***************************  code to manage map acording to   https://leafletjs.com/   ******************************* */
+/* ***************************  I create this code to manage map acording to   https://leafletjs.com/   ******************************* */
 // inicializar map
 const initMap = (Coordinates) => {
   // Initialize the map
