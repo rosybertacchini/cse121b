@@ -1,9 +1,9 @@
 /* **************************************************************************************************************** */
 /* Rosy Bertacchini 
 /* 
-/* Project Presentation: Java Script using leaft maps.
+/* Project Presentation: Java Script using leaft maps.
 /* 
-/* The project uses a JSON file stored in: https://api.jsonbin.io/v3/b/653738cf54105e766fc642f2/  
+/* The project uses a JSON file stored in: https://api.jsonbin.io/v3/b/6537421254105e766fc645cb/  
 /* containing the locations  within other data for the map. From this JSON structure an array is created.
 /*
 /* One function of maps is to add a popup to a marker, here, I created the content of 
@@ -29,7 +29,7 @@ let coordinateList = [];
 /* async getCoordinates Function using fetch()*/
 const getCoordinates = async () => {
   const response = await fetch(
-    "https://api.jsonbin.io/v3/b/653738cf54105e766fc642f2"
+    "https://api.jsonbin.io/v3/b/6537421254105e766fc645cb/"
   ).then((response) => response.json());
 
   // cearte an array
@@ -135,7 +135,7 @@ const initMap = (Coordinates) => {
     //events with maps
 
     // Change color of the marker
-    // 1.- *******************************
+    // *******************************
     marker.on("mouseover", function (e) {
       //console.log(e);
       marker.setIcon(blueIcon);
