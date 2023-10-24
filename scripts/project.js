@@ -102,7 +102,7 @@ const initMap = (Coordinates) => {
     marker.setIcon(redIcon);
     markers.push(marker);
 
-    var popupContent = "<h3>" + coordinate.title + "</h3>";
+    var popupContent = "<h2>" + `${coordinate.title}` + "</h2>"; //"<h3>" + coordinate.title + "</h3>"       `${coordinate.title}`;
     popupContent +=
       '<swiper-container class="mySwiper" pagination="true" pagination-clickable="true" space-between="30" effect="fade" navigation="true">';
     coordinate.images.forEach(function (image) {
@@ -110,8 +110,8 @@ const initMap = (Coordinates) => {
         '<div class="swiper-slide"><img src="' + image + '"></div>';
     });
     popupContent += "</swiper-container>";
-    popupContent += "<h4>" + coordinate.data1 + "</h4>";
-    popupContent += "<h4>" + coordinate.data2 + "</h4>";
+    popupContent += "<h3>" + `${coordinate.data1}` + "</h3>";
+    popupContent += "<h3>" + `${coordinate.data2}` + "</h3>";
 
     marker.bindPopup(popupContent);
 
