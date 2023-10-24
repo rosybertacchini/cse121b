@@ -1,6 +1,23 @@
-/* ********************************************************** */
+/* **************************************************************************************************************** */
 /* Rosy Bertacchini 
-/* ********************************************************** */
+/* 
+/* Project Presentation: Java Script using leaft maps.
+/* 
+/* The project uses a JSON file stored in: https://api.jsonbin.io/v3/b/653738cf54105e766fc642f2/  
+/* containing the locations  within other data for the map. From this JSON structure an array is created.
+/*
+/* One function of maps is to add a popup to a marker, here, I created the content of 
+/* the popup to reproduce what I saw in Zillow.com.
+/*
+/* I made a module to create a button. The button “More Info” to toggle the information. 
+/* (appear and disappear the information).
+/* 
+/* I created  several <il> elements in the document to display the information into a <div> element. 
+/* Also use  template literals.
+/*
+/* I copied the marker file and changed the color of the 
+/* marker to switch icons when the mouse is over the marker.
+/* ***************************************************************************************************************** */
 
 // ussing a module
 import { createButton } from "./module.js";
@@ -25,7 +42,7 @@ const getCoordinates = async () => {
 const div = document.querySelector("#toggle");
 div.appendChild(createButton("moreInfo", "More information"));
 
-/* use template literals  */
+/* use template literals and conditional switch */
 const displayCoordinates = (Coordinates) => {
   Coordinates.forEach((coordinate) => {
     //console.log(coordinate.title);
