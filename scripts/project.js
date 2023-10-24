@@ -12,7 +12,7 @@ let coordinateList = [];
 /* async getCoordinates Function using fetch()*/
 const getCoordinates = async () => {
   const response = await fetch(
-    "https://api.jsonbin.io/v3/b/6536f04e54105e766fc62c13/"
+    "https://api.jsonbin.io/v3/b/65372c1954105e766fc63eb1/"
   ).then((response) => response.json());
 
   // cearte an array
