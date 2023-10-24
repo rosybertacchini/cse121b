@@ -12,7 +12,7 @@ let coordinateList = [];
 /* async getCoordinates Function using fetch()*/
 const getCoordinates = async () => {
   const response = await fetch(
-    "https://api.jsonbin.io/v3/b/653735e20574da7622bcdf37/"
+    "https://api.jsonbin.io/v3/b/653738cf54105e766fc642f2"
   ).then((response) => response.json());
 
   // cearte an array
@@ -32,17 +32,17 @@ const displayCoordinates = (Coordinates) => {
     switch (coordinate.continent) {
       case "America":
         let li_am = document.createElement("li");
-        li_am.innerHTML = `${coordinate.title}`;
+        li_am.innerHTML = `${coordinate.title} Cost: $${coordinate.data2}`;
         document.querySelector("#America").appendChild(li_am);
         break;
       case "Europe":
         let li_eu = document.createElement("li");
-        li_eu.innerHTML = `${coordinate.title}`;
+        li_eu.innerHTML = `${coordinate.title} Cost: $${coordinate.data2}`;
         document.querySelector("#Europe").appendChild(li_eu);
         break;
       case "Africa":
         let li_af = document.createElement("li");
-        li_af.innerHTML = `${coordinate.title}`;
+        li_af.innerHTML = `${coordinate.title} Cost: $${coordinate.data2}`;
         document.querySelector("#Africa").appendChild(li_af);
         break;
 
