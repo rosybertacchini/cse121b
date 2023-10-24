@@ -2,6 +2,9 @@
 /* Rosy Bertacchini 
 /* ********************************************************** */
 
+// ussing a module
+import { createButton } from "./module.js";
+
 /* Declare and initialize global variables */
 const coordinateElement = document.querySelector("#Coordinates");
 let coordinateList = [];
@@ -11,20 +14,43 @@ const getCoordinates = async () => {
   const response = await fetch(
     "https://api.jsonbin.io/v3/b/6536f04e54105e766fc62c13/"
   ).then((response) => response.json());
-  //console.log(response);
 
+  // cearte an array
   coordinateList = response.record.coords;
-  //console.log(coordinateList);
   initMap(coordinateList);
   displayCoordinates(coordinateList);
 };
 
-/* apear and disapear more info */
-div = document.querySelector("#toggle");
-var button = document.createElement("button");
-button.id = "moreInfo";
-button.innerHTML = "More Information";
-div.appendChild(button);
+// use module
+const div = document.querySelector("#toggle");
+div.appendChild(createButton("moreInfo", "More information"));
+
+/* use template literals  */
+const displayCoordinates = (Coordinates) => {
+  Coordinates.forEach((coordinate) => {
+    //console.log(coordinate.title);
+    switch (coordinate.continent) {
+      case "America":
+        let li_am = document.createElement("li");
+        li_am.innerHTML = `${coordinate.title}`;
+        document.querySelector("#America").appendChild(li_am);
+        break;
+      case "Europe":
+        let li_eu = document.createElement("li");
+        li_eu.innerHTML = `${coordinate.title}`;
+        document.querySelector("#Europe").appendChild(li_eu);
+        break;
+      case "Africa":
+        let li_af = document.createElement("li");
+        li_af.innerHTML = `${coordinate.title}`;
+        document.querySelector("#Africa").appendChild(li_af);
+        break;
+
+      default:
+        console.log("default");
+    }
+  });
+};
 
 // apear and disapear moreInfo using id element in css
 let toggleInfo = () => {
@@ -33,33 +59,6 @@ let toggleInfo = () => {
   } else {
     $("#slide-in").addClass("in");
   }
-};
-
-/* async displayCoordinates Function */
-const displayCoordinates = (Coordinates) => {
-  Coordinates.forEach((coordinate) => {
-    //console.log(coordinate.title);
-    switch (coordinate.continent) {
-      case "America":
-        let li_am = document.createElement("li");
-        li_am.innerHTML = coordinate.title;
-        document.querySelector("#America").appendChild(li_am);
-        break;
-      case "Europe":
-        let li_eu = document.createElement("li");
-        li_eu.innerHTML = coordinate.title;
-        document.querySelector("#Europe").appendChild(li_eu);
-        break;
-      case "Africa":
-        let li_af = document.createElement("li");
-        li_af.innerHTML = coordinate.title;
-        document.querySelector("#Africa").appendChild(li_af);
-        break;
-
-      default:
-        console.log("default");
-    }
-  });
 };
 
 /* ***************************  code to manage map acording to   https://leafletjs.com/   ******************************* */
