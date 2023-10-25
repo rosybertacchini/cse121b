@@ -7,7 +7,7 @@
 /* containing the locations  within other data for the map. From this JSON structure an array is created.
 /*
 /* One function of maps is to add a popup to a marker, here, I created the content of 
-/* the popup to reproduce what I saw in Zillow.com.
+/* the popup to reproduce what I saw in Zillow.com.    PLESAE CLICK ON THE LOCATION ICON or MARKER.
 /*
 /* I made a module to create a button. The button “More Info” to toggle the information. 
 /* (appear and disappear the information).
